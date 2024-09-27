@@ -4,7 +4,8 @@ public class Enigma{
         "#EJOTYCHMRWAFKPUZDINSXBGLQV",
         "#BDFHJLNPRTVXZACEGIKMOQSUWY",
         "#NWDKHGXZVRIFJBLMAOPSCYUTQE",
-        "#TGOWHLIFMCSZYRVXQABUPEJKND"};
+        "#TGOWHLIFMCSZYRVXQABUPEJKND"
+    };
 
 
     private Rotor rotors[];
@@ -21,12 +22,18 @@ public class Enigma{
 
     public String decrypt(String message){        
         //TODO
+        
+        for (int i = 0; i < array.length; index++) {
+            
+        }
     }
 
 
     
     public String encrypt(String message){
         //TODO
+
+
     }
 
     

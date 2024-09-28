@@ -13,10 +13,11 @@ public class Rotor {
     }
     public boolean rotate(){
         //TODO
-        if (startChar =  rotorValues.charAt(currentIndex++)){
+        if (startChar == rotorValues.charAt(currentIndex)){
             return true;
         }
 
+        currentIndex++;
         return false;
     }
 

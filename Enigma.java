@@ -22,10 +22,22 @@ public class Enigma{
 
     public String decrypt(String message){        
         //TODO
-        
-        for (int i = 0; i < array.length; index++) {
-            
+        String decryptString = "";
+
+        Boolean bool = true;
+
+        for(int i = 0;i < message.length();i++){
+            char currentChar = message.charAt(i);
+
+            for (int index = 2; index >= 0; index++) {
+                
+            }
+
+
+            rotate();
         }
+
+            
     }
 
 

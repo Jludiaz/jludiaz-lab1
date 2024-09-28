@@ -2,7 +2,6 @@ public class Rotor {
 
     private String rotorValues;
     private char startChar;
-    private int currentIndex = 0;
         
     public Rotor(String v, char c){
         this.rotorValues = new String(v);

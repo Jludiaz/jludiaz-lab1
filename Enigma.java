@@ -24,28 +24,42 @@ public class Enigma{
         //TODO
         String decryptString = "";
 
-        Boolean bool = true;
-
         for(int i = 0;i < message.length();i++){
             char currentChar = message.charAt(i);
 
-            for (int index = 2; index >= 0; index++) {
-                
-            }
-
+            currentChar = rotors[2].charAt(rotors[2].indexOf(currentChar));
+            currentChar = rotors[1].charAt(rotors[1].indexOf(currentChar));
+            currentChar = rotors[0].charAt(rotors[0].indexOf(currentChar));
+ 
+            System.out.println(currentChar);
+            decryptString += currentChar;
 
             rotate();
         }
 
-            
+        return decryptString;  
     }
 
 
     
     public String encrypt(String message){
-        //TODO
+        String encrypString = "";
 
 
+        for(int i = 0;i < message.length();i++){
+            char currentChar = message.charAt(i);
+
+            currentChar = rotors[0].charAt(rotors[0].indexOf(currentChar));
+            currentChar = rotors[1].charAt(rotors[1].indexOf(currentChar));
+            currentChar = rotors[2].charAt(rotors[2].indexOf(currentChar));
+ 
+            System.out.println(currentChar);
+            encrypString += currentChar;
+
+            rotate();
+        }
+
+        return encrypString;  
     }
 
     

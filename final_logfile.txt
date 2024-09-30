@@ -1,0 +1,35 @@
+commit 237568c21bdd60a60666bc35a7ec33c8a1fa2592
+Author: Jeremy <jeremyludiaz@gmail.com>
+Date:   Mon Sep 30 00:11:44 2024 -0400
+
+    Finally got the test cases to work
+
+commit a29dc32e1c8cbac22f316929b335526250ffd071
+Author: Jeremy <jeremyludiaz@gmail.com>
+Date:   Fri Sep 27 20:43:34 2024 -0400
+
+    fourth commit, maybe I have encrypt and decrypt?
+
+commit ab984b9a7a6655e7eb5387c6be842b5085283c11
+Author: Jeremy <jeremyludiaz@gmail.com>
+Date:   Fri Sep 27 20:06:06 2024 -0400
+
+    third commit, I understand enigma file now
+
+commit 51f00350768daca8c9d1bbc4a7b834929e29444e
+Author: Jeremy <jeremyludiaz@gmail.com>
+Date:   Fri Sep 27 19:41:11 2024 -0400
+
+    commit 2
+
+commit 04c1ff1427cef3b7c296b3fb12c9484b08502670
+Author: Jeremy <jeremyludiaz@gmail.com>
+Date:   Mon Sep 23 14:50:58 2024 -0400
+
+    Adding the log file just in case
+
+commit 8c50bfb7333e394926c2d9876c4d5e5bbbf41f57
+Author: Jeremy <jeremyludiaz@gmail.com>
+Date:   Mon Sep 23 14:46:37 2024 -0400
+
+    Lab Attempt

@@ -12,24 +12,26 @@ public class Rotor {
     }
     public boolean rotate(){
         //TODO
-        if (startChar == rotorValues.charAt(currentIndex)){
+        
+        rotorValues = rotorValues.charAt(rotorValues.length() - 1) + rotorValues.substring(0, rotorValues.length() - 1);
+
+        //move the first charcter to the back
+        if (rotorValues.charAt(0) == startChar){
             return true;
         }
 
-        currentIndex++;
         return false;
+    
     }
 
     public int indexOf(char c){
         //TODO
-        int index = rotorValues.indexOf(c);
-        return index;
+        return rotorValues.indexOf(c);
     }
 
     public char charAt(int idx){
         //TODO
-        char character = rotorValues.charAt(idx);
-        return character;
+        return rotorValues.charAt(idx);
     }
 }
     

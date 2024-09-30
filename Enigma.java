@@ -1,6 +1,7 @@
 public class Enigma{
 
-    private String rotorInit[] = {"#GNUAHOVBIPWCJQXDKRYELSZFMT",
+    private String rotorInit[] = {
+        "#GNUAHOVBIPWCJQXDKRYELSZFMT",
         "#EJOTYCHMRWAFKPUZDINSXBGLQV",
         "#BDFHJLNPRTVXZACEGIKMOQSUWY",
         "#NWDKHGXZVRIFJBLMAOPSCYUTQE",
@@ -23,16 +24,18 @@ public class Enigma{
     public String decrypt(String message){        
         //TODO
         String decryptString = "";
+        char[] messageChar = message.toCharArray();
 
-        for(int i = 0;i < message.length();i++){
-            char currentChar = message.charAt(i);
+        for(int i = 0;i < messageChar.length;i++){
+            char currentChar = messageChar[i];
 
-            currentChar = rotors[2].charAt(rotors[2].indexOf(currentChar));
-            currentChar = rotors[1].charAt(rotors[1].indexOf(currentChar));
-            currentChar = rotors[0].charAt(rotors[0].indexOf(currentChar));
- 
-            System.out.println(currentChar);
-            decryptString += currentChar;
+            int innerIndex = rotors[2].indexOf(currentChar);
+            char outerChar = rotors[1].charAt(innerIndex);
+            //System.out.println(outerChar);
+            int middleIndex = rotors[2].indexOf(outerChar);
+            char finalChar = rotors[0].charAt(middleIndex);
+            
+            decryptString += finalChar;
 
             rotate();
         }
@@ -43,23 +46,28 @@ public class Enigma{
 
     
     public String encrypt(String message){
-        String encrypString = "";
 
+        String encryptString = new String();
+        char[] messageChar = message.toCharArray();
 
-        for(int i = 0;i < message.length();i++){
-            char currentChar = message.charAt(i);
+        for(int i = 0;i < messageChar.length;i++){
+            char currentChar = messageChar[i];
 
-            currentChar = rotors[0].charAt(rotors[0].indexOf(currentChar));
-            currentChar = rotors[1].charAt(rotors[1].indexOf(currentChar));
-            currentChar = rotors[2].charAt(rotors[2].indexOf(currentChar));
- 
-            System.out.println(currentChar);
-            encrypString += currentChar;
+          
+            int innerIndex = rotors[0].indexOf(currentChar);
+            char outerChar = rotors[2].charAt(innerIndex);
+            //System.out.println(outerChar);
+            int middleIndex = rotors[1].indexOf(outerChar);
+            char finalChar = rotors[2].charAt(middleIndex);
+            
+            encryptString += finalChar;
 
             rotate();
         }
 
-        return encrypString;  
+        System.out.println(encryptString);
+
+        return encryptString;  
     }
 
     
